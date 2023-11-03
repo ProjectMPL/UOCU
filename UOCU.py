@@ -48,6 +48,8 @@ def commands(cmd):
             os.system("pip install "+packages[i])  
         os.system("python3 -m pip install --upgrade pip")
 
+    if cmd=="help":
+        RT='unlock - used to update all of the packages used for UOCU\n mode - used to switch between Normal and EZUserMode\nexit - used to exit the program\nclear - used to clear the terminal\nls - lists out everything in current directory\ncd - used to change your directory\nrun - used to run any executable/python file\n?pointer - used to get the path of the pointer (your current directory)\nip - used to get your IPv4 address\nsys * - used to run any system command use:"sys ipconfig" --->runs "ipconfiog"\ncredits - self explanatory'
     if cmd=="mode":
         Point.EZUserMode=not Point.EZUserMode
         RT="EZUserMode: "+str(Point.EZUserMode)+" | Press enter to continue to EZUserMode"
