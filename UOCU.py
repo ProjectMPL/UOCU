@@ -66,7 +66,27 @@ def commands(cmd):
         osdir=os.listdir(os.path.dirname(Point.P1))
         for i in range(len(osdir)):
             if not cmd.startswith("."):
-                if osdir[i].find('.')>1:
+                if osdir[i].lower().find('uocu')>=1:
+                    r+=str(i).ljust(5)+"| 📍 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].lower().find('linux')>=1:
+                    r+=str(i).ljust(5)+"| 🐧 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.blend')>1 or osdir[i].find('.fbx')>1 or osdir[i].find('.obj')>1 or osdir[i].find('.gcode')>1:
+                    r+=str(i).ljust(5)+"| 🧱 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.png')>1 or osdir[i].find('.jpg')>1 or osdir[i].find('.img')>1 or osdir[i].find('.jpeg')>1:
+                    r+=str(i).ljust(5)+"| 🎨 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.torrent')>1:
+                    r+=str(i).ljust(5)+"| 🔓 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.mp4')>1:
+                    r+=str(i).ljust(5)+"| 🎥 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.mp3')>1:
+                    r+=str(i).ljust(5)+"| 📼 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.txt')>1:
+                    r+=str(i).ljust(5)+"| 📝 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.zip')>1:
+                    r+=str(i).ljust(5)+"| 📦 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.py')>1:
+                    r+=str(i).ljust(5)+"| 🐍 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
+                elif osdir[i].find('.')>1:
                     r+=str(i).ljust(5)+"| 📄 "+Col.GREEN+osdir[i]+" "+Col.DEFAULT+"\n"
                 else:
                     r+=str(i).ljust(5)+"| 📁 "+Col.BOLD+Col.BLUE+osdir[i]+" "+Col.DEFAULT+"\n"
